@@ -34,7 +34,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your hourly wage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lpl-2o-3U9" customClass="CurrencyTextField" customModule="window_shopper" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lpl-2o-3U9" customClass="CurrencyTextField" customModule="window_shopper" customModuleProvider="target">
                                 <rect key="frame" x="20" y="498" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="BDt-pY-sDU"/>
@@ -68,6 +68,9 @@
                                 <state key="normal" title="Clear calculator">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="clearCalculatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6FR-6D-1Nu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -96,7 +99,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="hoursLabel" destination="xLF-Ng-Sn5" id="Md7-Yr-iDA"/>
                         <outlet property="priceText" destination="Lpl-2o-3U9" id="Ytb-qh-J8g"/>
+                        <outlet property="resultLabel" destination="Mpy-Cy-gL8" id="zb6-Fg-v7Q"/>
                         <outlet property="wageText" destination="wtF-na-Xi6" id="82D-4X-caQ"/>
                     </connections>
                 </viewController>
@@ -107,7 +112,7 @@
     </scenes>
     <designables>
         <designable name="Lpl-2o-3U9">
-            <size key="intrinsicContentSize" width="111.5" height="18.5"/>
+            <size key="intrinsicContentSize" width="65" height="18.5"/>
         </designable>
         <designable name="wtF-na-Xi6">
             <size key="intrinsicContentSize" width="111.5" height="18.5"/>
